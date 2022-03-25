@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <header id="header">
-        <a href="./" id="logo">LOGO</a>
+        <a href="./" id="logo"><img src="./images/logo.png" alt=""><span>MovieEarn</span></a>
         <ul>
             <a href="./notfound.php"><img src="./images/btn1.png">訊息公告</a>
             <a href="./notfound.php"><img src="./images/btn2.png">新手教學</a>
