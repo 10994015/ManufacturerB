@@ -1,0 +1,251 @@
+.earn {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    width:700px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.earn > a, .earn > div{
+    display: block;
+    width:150px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: #1484c4;
+    color:#fff;
+    text-align: center;
+    line-height: 150px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+.earn > img{
+    width:180px;
+    cursor: pointer;
+}
+.orderModule,.taskModule,.urlModule,.otherModule,.alreadyModule,.cardModule,.storeModule{
+    position: relative;
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    min-height: 100vh;
+    display: none;
+
+}
+.orderModule > .back,
+.taskModule > .back ,
+.otherModule > .back ,
+.alreadyModule > .back ,
+.cardModule > .back ,
+.storeModule > .back ,
+.urlModule > .back {
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.orderModule > .box, 
+.otherModule > .box, 
+.alreadyModule > .box,
+.taskModule > .box, 
+.cardModule > .box, 
+.storeModule > .box, 
+.urlModule > .box{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:360px;
+    height: 220px;
+    background-color: #f1f1f1;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.orderModule > .box > .boxheader,
+.urlModule > .box > .boxheader,
+.otherModule > .box > .boxheader,
+.alreadyModule > .box > .boxheader,
+.cardModule > .box > .boxheader,
+.storeModule > .box > .boxheader,
+.taskModule > .box > .boxheader{
+    position: absolute;
+    top:10px;
+    left:50%;
+    transform: translateX(-50%);
+    width:320px;
+    height: 40px;
+    background-color: #D6DCE5;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.orderModule > .box > .boxheader > i,
+.urlModule > .box > .boxheader > i,
+.otherModule > .box > .boxheader > i,
+.alreadyModule > .box > .boxheader > i,
+.cardModule > .box > .boxheader > i,
+.storeModule > .box > .boxheader > i,
+.taskModule > .box > .boxheader > i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    font-size: 24px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.orderModule > .box > .boxbottom,
+.urlModule > .box > .boxbottom,
+.otherModule > .box > .boxbottom,
+.alreadyModule > .box > .boxbottom,
+.cardModule > .box > .boxbottom,
+.storeModule > .box > .boxbottom,
+.taskModule > .box > .boxbottom{
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    width:200px;
+    height: auto;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.orderModule > .box > .boxbottom > a,
+.urlModule > .box > .boxbottom > a,
+.otherModule > .box > .boxbottom > a,
+.alreadyModule > .box > .boxbottom > a,
+.cardModule > .box > .boxbottom > a,
+.storeModule > .box > .boxbottom > a,
+.taskModule > .box > .boxbottom > a{
+    display: block;
+    width:80px;
+    height: 35px;
+    background-color: #D6DCE5;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 600;
+    color:#222;
+}
+ #orderBtn{
+    display: block;
+    width:80px;
+    height: 35px;
+    background-color: #D6DCE5;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 600;
+    color:#222;
+    outline: none;
+    border:1px #000 solid;
+    cursor: pointer;
+}
+.taskModule > .box > .boxbottom,
+.alreadyModule > .box > .boxbottom,
+.cardModule > .box > .boxbottom,
+.storeModule > .box > .boxbottom,
+.otherModule > .box > .boxbottom{
+    justify-content: center;
+}
+.taskModule > .box  .taskBox{
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(2, 80px);
+    grid-column-gap: 20px;
+   grid-row-gap: 10px;
+
+
+}
+.taskModule > .box{
+    width:500px;
+    height: 300px;
+}
+.taskModule > .box > .boxheader{
+    width:460px;
+}
+#taskBtn.disable{
+    background-color: #ccc;
+    color:#999;
+    cursor: default;
+}
+.taskModule > .box  .taskBox > .task {
+    width:100%;
+    height: 100%;
+    background-color: #ccc;
+    cursor: pointer;
+    
+}
+.cardModule > .box > #card{
+    width:145px;
+    height: auto;
+    margin-top: 12px;
+}
+.cardModule > .box{
+    height: 400px;
+}
+#taskchkbox{
+    position: absolute;
+    top: -999999999999999999px;
+    left:-999999999999999px;
+    z-index: -9999999999;
+    opacity: 0;
+}
+#cardContent {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:130px;
+}
+@media screen and (max-width:1400px){
+    .earn {
+        align-items: center;
+        justify-items: center;  
+        justify-content: center;
+        align-content: center;
+    }
+}
+@media screen and (max-width:768px){
+    .earn {
+        display: grid;
+        grid-template-columns: 200px 200px ;
+        grid-template-rows: 200px 200px 200px 200px;
+        width:100%;
+        align-items: center;
+        justify-items: center;  
+        justify-content: center;
+        align-content: center;
+
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:768px){
+    .earn {
+        display: grid;
+        grid-template-columns: 150px 150px ;
+        grid-template-rows: 150px 150px 150px 150px;
+        
+    }
+    .earn > a, .earn > div{
+        display: block;
+        width:130px;
+        height: 130px;
+        border-radius: 20px;
+        background-color: #1484c4;
+        color:#fff;
+        text-align: center;
+        line-height: 130px;
+        font-weight: 600;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}

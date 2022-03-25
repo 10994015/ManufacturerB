@@ -1,0 +1,207 @@
+:root{
+    --main-color:#09669c;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body{
+    background-color: #f1f1f1;
+}
+a{
+    text-decoration: none;
+}
+.memberinfo{
+    width:100%;
+    // height: px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     >div{
+        min-width: 200px;
+        width:auto;
+        height: 40px;
+        display: flex;
+        color:#000;
+        margin:5px 0px;
+        justify-content: flex-start;
+        border-bottom: 1px #fff solid;
+        >b{
+            color:#fff;
+            line-height: 40px;
+            text-align: center;
+            width:60px;
+            // border-right: 1px #fff solid;
+        }
+        >p{
+            color:#fff;
+            line-height: 40px;
+            text-align: center;
+            padding: 0 20px;
+            width:auto;
+        }
+        
+     }
+     > .logout {
+        display: block;
+        width:80px;
+        height: 40px;
+        background-color: #54CCFC;
+        color:#111;
+        text-align: center;
+        line-height:40px;
+        font-weight: 600;
+        margin:5px 0px;
+    }
+}
+header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:300px;
+    height: 100vh;
+    background-color: rgba(0,0,0,.7);
+    z-index: 99999999;
+    color:#fff;
+    padding: 30px 0;
+    transition: .4s;
+    > #menu{
+        position: absolute;
+        top: 0;
+        right:-50px;
+        width:50px;
+        height: 50px;
+        background-color:#B80816;
+        cursor: pointer;
+        font-size: 28px;
+        text-align: center;
+        line-height: 50px;
+    }
+    > #logo{
+        margin:auto;
+        display: block;
+        text-align: center;
+    }
+    > ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        width:100%;
+        > a{
+            margin:0px 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 3px;
+            width:100%;
+            justify-content: center;
+            padding: 10px 0;
+            font-family: Microsoft JhengHei;
+            &:hover{
+                border-bottom:2px #ccc solid;
+                border-right: 4px #B80816 solid;
+                background-color: #000;
+                font-weight: 600;
+            }
+            > img{
+                width:50px;
+                height: 50px;
+                margin-right: 12px;
+            }
+        }
+    }
+    a{
+        color:#fff;
+    }
+}
+.top{
+    width:100%;
+    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+     > img{
+         width:100%;
+         height: 100%;
+         object-fit: cover;
+         -webkit-filter:brightness(.7);
+     }
+     > div{
+         display: block;
+         width:400px;
+         position: absolute;
+         top: 50%;
+         left:50%;
+         transform: translateX(-50%);
+         >img{
+            width:100%;
+         }
+     }
+     > a{
+         width:200px;
+         display: block;
+         position: absolute;
+         top: 60%;
+         left:calc(50% - 100px);
+         
+         animation:btnanim 1s linear infinite ;
+         > img{
+             width:100%;
+         }
+     }
+}
+@keyframes btnanim{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.center{
+    min-width:100%;
+    min-height: 100vh;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    >img{
+        min-width:100%;
+        height: 100vh;
+        object-fit: cover;
+        transition: .3s ;
+    }
+    > div{
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width:100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         > i{
+             color:#fff;
+             margin:0 15px;
+             cursor: pointer;
+             font-size: 50px;
+             &:hover{
+                 color: #f00;
+             }
+         }
+    }
+}
+footer{
+    width:100%;
+    height: 100vh;
+    background-color: #111;
+    color:#fff;
+}

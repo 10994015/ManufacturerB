@@ -1,0 +1,190 @@
+.login> form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:45%;
+    height: 300px;
+    background-image: url('./images/CC02.png');
+    margin:0 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 30px;
+}
+.login> form >.loimg01{
+    position: absolute;
+    top: 30px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.login> form >input{
+    width:200px;
+    height: 30px;
+    margin:10px 0;
+    padding: 0 5px;
+    outline: none;
+    border:none;
+    border:1px #ccc solid;
+    border-radius: 6px;
+}
+.login> form > a{
+    color:#777;
+    font-weight: 600;
+}
+.login> form >input[type="submit"]{
+    border-radius: 8px;
+    background-color: #D02132;
+    height: 40px;
+    color:#fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 5px #000;
+    outline: none;
+    border:none;
+    font-size: 18px;
+}
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./images/CC01.png');
+    background-size: cover;
+    width:100%;
+    height: 350px;
+    margin:0 auto;
+    margin-left: 20px;
+}
+.login >.register{
+    width:45%;
+    height: 300px;
+    background-image: url('./images/CC02.png');
+    margin:0 10px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;flex-direction: column;
+    position: relative;
+}
+.login >.register > a{
+    color:#000;
+    font-weight: 600;
+    font-size: 21px;
+}
+.login >.register > .reimg01{
+    position: absolute;
+    top: 30px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.login >.register > .reimg02{
+    margin-bottom: 15px;
+}
+.login >.register >a > img{
+    width:210px;
+}
+
+.forgotpwd{
+    position: relative;
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    min-height: 100vh;
+    display: none;
+}
+.forgotpwd > .back{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.forgotpwd > .box{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:360px;
+    height: 420px;
+    background-color: #f1f1f1;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.forgotpwd > .box > img{
+    width:200px;
+}
+.forgotpwd > .box > .boxheader{
+    position: absolute;
+    top:10px;
+    left:50%;
+    transform: translateX(-50%);
+    width:320px;
+    height: 40px;
+    background-color: #D6DCE5;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.forgotpwd > .box > .boxheader > i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    font-size: 24px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.forgotpwd > .box > .boxbottom{
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    width:200px;
+    height: auto;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.forgotpwd > .box > .boxbottom > a{
+    display: block;
+    width:80px;
+    height: 35px;
+    background-color: #D6DCE5;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 600;
+    color:#222;
+}
+.forgotpwd > .box > .boxbottom{
+    justify-content: center;
+}
+
+@media screen and (max-width:1024px){
+    .banner{
+        display: none;
+    }
+    .content > .left{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .login{
+        flex-direction: column;
+        height: 700px;
+        margin:0;
+    }
+    .login> form{
+        width:80%;
+        margin:15px 0;
+    }
+    .login >.register{
+        width:80%;
+        margin:15px 0;
+    }
+}
