@@ -59,9 +59,8 @@ if(isset($_GET['mailok']) && $_GET['mailok']==1){
 </head>
 <body>
     
-<?php include_once('./shard.php'); ?>
+<?php include_once('./header.php'); ?>
     <div class="content">
-    <?php include_once('./left.php'); ?>
         <div class="login">
             <form action="./member_check.php" method="POST">
                 <img src="./images/CC10.png"  class="loimg01">
@@ -73,7 +72,7 @@ if(isset($_GET['mailok']) && $_GET['mailok']==1){
             <div class="register">
                 <img src="./images/CC03.png" alt="" class="reimg01">
                 <img src="./images/CC09.png" alt="" class="reimg02">
-                <a href="./register.php"><img src="./images/CC04.png" alt=""></a>
+                <a href="./register.php">點擊註冊</a>
             </div>
         </div>
         
@@ -89,8 +88,7 @@ if(isset($_GET['mailok']) && $_GET['mailok']==1){
             <div class="boxbottom"><a href="javascript:;" id="forgetBtn"">確認</a></div>
         </div>
     </div>
-    <?php include_once('./footer.php'); ?>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
     <script>
   const forgotpwd = document.getElementById('forgotpwd');
     const forgetBtn = document.getElementById('forgetBtn');
