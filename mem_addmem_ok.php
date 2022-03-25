@@ -52,9 +52,7 @@ if(isset($_POST['MM_process']) && $_POST['MM_process']=='addmem'){
 </head>
 <body>
     
-<?php include_once('./shard.php'); ?>
     <div class="content">
-    <?php include_once('./left.php'); ?>
     <div class="memberok"">
 <?php
 //如果接收到msg的訊息是1時, 表示註冊成功, 發信也成功了

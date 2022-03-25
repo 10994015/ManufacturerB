@@ -170,7 +170,7 @@ if(isset($_SESSION['name'])){
                 contentname.innerHTML = "真實姓名:"+showname;
                 contentmoney.innerHTML = "餘額:"+showmoney;
                 contentphone.innerHTML = "手機:" + showphone;
-                contenturl.innerHTML = "專屬網址"+"http://www.partyboxxxxxx.com/register.php?code="+showurl;
+                contenturl.innerHTML = "專屬網址"+"http://movieearn.com/register.php?code="+showurl;
                 if(showup==""){
                     contentup.innerHTML = "上線:無";
                 }else{
@@ -180,7 +180,7 @@ if(isset($_SESSION['name'])){
                 $('#qrcode').qrcode({
                     width: 120,
                     height: 120,
-                    text: "http://www.partyboxxxxxx.com/register.php?code="+showurl
+                    text: "http://movieearn.com/register.php?code="+showurl
                 });
                                 
             }
