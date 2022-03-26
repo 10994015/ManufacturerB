@@ -1,7 +1,52 @@
+<style>
+footer {
+    width:100%;
+    padding: 40px 50px;
+    background-color: #09090B;
+    color:#fff;
+    font-family: "微軟正黑體";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing:1.5px;
+}
+footer > h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 22px;
+}
+footer > p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+footer .footerlist {
+    display: flex;
+    margin-top: 20px;
+}
+footer .footerlist > .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:350px;
+    margin:0 30px;
+}
+footer .footerlist > .list > h3 {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+footer .footerlist > .list > p {
+    text-align: center;
+    letter-spacing:1px;
+}
+</style>
+
 <footer>
         <h2>聯繫我們</h2>
-        <p>成立於2018年7月</p>
-        <p>若您想成為Party Go的合作夥伴，或是你想加入Party Go成為我們的一員，都歡迎透過客服聯繫我們。</p>
+        <p>成立於2022年1月</p>
+        <p>若您想成為MovieEarn的合作夥伴，或是你想加入若您想成為MovieEarn的合作夥伴，或是你想加入Party成為我們的一員，都歡迎透過客服聯繫我們。</p>
         <div class="footerlist">
             <div class="list">
                 <h3>創造價值</h3>
@@ -13,7 +58,7 @@
             </div>
             <div class="list">
                 <h3>幫助中心</h3>
-                <p>常見問題項目，及其他問題的解答和協助;<br/>或有任何問題，請與24H線上<a href="./cms.php" style="color:#fff">客服聯繫</a>。</p>
+                <p>常見問題項目，及其他問題的解答和協助;<br/>或有任何問題，請與24H線上客服聯繫。</p>
             </div>
         </div>
     </footer>

@@ -22,7 +22,7 @@ if(isset($_SESSION['name']) && isset($_GET['user'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
-    <title>Party Go</title>
+    <title>MovieEarn</title>
     <style>
    
     </style>

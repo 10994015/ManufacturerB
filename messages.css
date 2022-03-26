@@ -1,91 +1,169 @@
-.content  > .messages {
-    background-color: #ddd;
-    width:700px;
-    margin: 0 50px;
-    border-radius: 8px;
-    min-height: 500px;
-    height: auto;
-    padding-bottom: 25px;
-    overflow: hidden;
+body {
+  background-color: #212121;
 }
-.content  > .messages > h2{
-    color:#fff;
-    text-align: center;
-    width:100%;
-    background-color: var(--main-color);
-    height: 60px;
-    line-height: 60px;
+
+.messages {
+  width: 1000px;
+  margin: auto;
+  background-color: #fff;
+  min-height: 100vh;
+  height: auto;
+  color: #121212;
+  padding-bottom: 50px;
 }
-.content  > .messages > .messatgeItem{
-    display: flex;
-    align-items: center;
-    width:100%;
-    height: 60px;
+
+.messages > .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px;
 }
-.content  > .messages > .messatgeItem > .item {
-    width:25%;
-    text-align: center;
-    cursor: pointer;
+
+.messages > .title > img {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
 }
-.content  > .messages > .messatgeItem > .item:hover{
-    color:var(--main-color);
+
+.messages > .title > h1 {
+  font-family: 'Microsoft JhengHei';
 }
-.content  > .messages > .messatgeItem > .item.active{
-    color:var(--main-color);
-    font-weight: 600;
+
+.messages > .class {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  background-color: #212121;
+  color: #fff;
+  padding: 10px 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
-.content  > .messages > .post {
-    display: flex;
-    flex-direction: column;
-    background-color: #FEFEFE;
-    width:80%;
-    margin:auto;
+
+.messages > .class > p {
+  margin-right: 12px;
 }
-.content  > .messages > .post > .list {
-    display: flex;
-    align-items: center;
-    min-height: 50px;
-    padding: 10px 0px;
-    color:#222;
-    border-bottom: 1px #ddd solid;
+
+.messages > .class > div {
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
 }
-.content  > .messages > .post > .list:hover {
-    color:var(--main-color);
-    transition:color .2s ease;
+
+.messages > .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
 }
-.content  > .messages > .post > .list > .class {
-    min-width:50px;
-    background-color: #F44F87;
-    color:#fff;
-    font-weight: 600;
-    text-align: center;
-    margin:0 15px;
+
+.messages > .post > .item {
+  border-bottom: 1px #333 solid;
+  width: 100%;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.content  > .messages > .post > .list > .date {
-    width:80px;
-    font-weight: 600;
-    text-align: left;
-    margin:0 15px;
+
+.messages > .post > .item > img {
+  width: 220px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.content  > .messages > .more{
-    width:100%;
-    height: 30px;
+
+.messages > .post > .item > .content {
+  width: 500px;
 }
-.content  > .messages > .more > a{
-    width:80%;
-    height: 30px;
-    line-height: 30px;
-    margin:auto;
-    text-align: right;
-    display: block;
-    color:var(--main-color);
+
+.messages > .post > .item > .content > h2 {
+  font-size: 22px;
+  margin-bottom: 4px;
 }
-.content  > .messages > .post > .list > .class.new{
-    background-color: #FF5600;
+
+.messages > .post > .item > .content > small {
+  margin-bottom: 4px;
+  color: #aaa;
+  font-weight: 600;
 }
-.content  > .messages > .post > .list > .class.system{
-    background-color:#008080 ;
+
+.messages > .post > .item > .content > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  width: 400px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 40px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #888;
 }
-.content  > .messages > .post > .list > .class.service{
-    background-color: blueviolet;
+
+.messages > .post > .item > .content > a {
+  color: #4371C2;
+  font-weight: 600;
 }
+
+.messages > .post > .item > .className {
+  width: 130px;
+  height: 30px;
+  border: 1px  green solid;
+  color: green;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.chkbox {
+  width: 15px;
+  height: 15px;
+  border: 2px #fff solid;
+  display: block;
+  margin-right: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chkbox > p {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  display: none;
+}
+/*# sourceMappingURL=messages.css.map */

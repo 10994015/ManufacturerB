@@ -55,25 +55,29 @@ if(isset($_GET['mailok']) && $_GET['mailok']==1){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
-    <title>Party Go</title>
+    <title>MovieEarn</title>
 </head>
 <body>
     
 <?php include_once('./header.php'); ?>
     <div class="content">
         <div class="login">
+            <h1>LOGIN</h1>
             <form action="./member_check.php" method="POST">
-                <img src="./images/CC10.png"  class="loimg01">
+                <p>登入您的MovieEarn帳號</p>
                 <input type="text" name="username" class="mem_mail" placeholder="請輸入帳號...." required/>
                 <input type="password" name="pwd" class="mem_pwd" placeholder="請輸入密碼...." required/>
-                <a href="javascript:;" id="forgettext">忘記密碼?</a>
+                <div class="link">
+                    <a href="./register.php" class="registerlink">會員申請</a>
+                    <a href="javascript:;" id="forgettext">忘記密碼?</a>
+                </div>
                 <input type="submit" class="submit-btn" value="登入" />
             </form>
-            <div class="register">
+            <!-- <div class="register">
                 <img src="./images/CC03.png" alt="" class="reimg01">
                 <img src="./images/CC09.png" alt="" class="reimg02">
                 <a href="./register.php">點擊註冊</a>
-            </div>
+            </div> -->
         </div>
         
     </div>
@@ -88,6 +92,7 @@ if(isset($_GET['mailok']) && $_GET['mailok']==1){
             <div class="boxbottom"><a href="javascript:;" id="forgetBtn"">確認</a></div>
         </div>
     </div>
+    <?php include_once('./footer.php'); ?>
     <script src="app.js"></script>
     <script>
   const forgotpwd = document.getElementById('forgotpwd');

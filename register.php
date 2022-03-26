@@ -34,15 +34,16 @@ if(isset($_GET['code'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="register.css">
-    <title>Movieearn</title>
+    <title>MovieEarn</title>
 </head>
 <body>
     
 <?php include_once('./header.php'); ?>
     <div class="content">
         <div class="register">
-            <img src="./images/CC04.png" alt="">
+        <h1>REGISTER</h1>
         <form method="post" action="./mem_addmem_ok.php" class="mem-addmem-area">
+            <p>建立您的MovieEarn帳號</p>
             <input type="text" name="username" class="username" 
                 placeholder="請輸入帳號..." required>
                 <div class="msg_username"></div>
@@ -81,7 +82,7 @@ if(isset($_GET['code'])){
 
         </div>
     </div>
-
+    <?php include_once('./footer.php'); ?>
     <script src="./jquery-3.4.1.min.js"></script>
     <script src="./script.js"></script>
     <script src="./check_mem_register.js"></script>

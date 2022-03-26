@@ -23,7 +23,7 @@ if(isset($_SESSION['name'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
-    <title>Party Go</title>
+    <title>MovieEarn</title>
     <style>
     .cms {
         display: flex;

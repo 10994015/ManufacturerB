@@ -114,6 +114,8 @@ if (isset($_SESSION['name'])) {
         </div>
 
     </div>
+
+    <?php include_once('./footer.php'); ?>
     <script src="script.js"></script>
     <script src="app.js"></script>
 </body>

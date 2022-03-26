@@ -13,7 +13,7 @@ include_once('./conn.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
-    <title>Party Go</title>
+    <title>MovieEarn</title>
     <style>
     .company{
         margin:20px 50px;

@@ -39,73 +39,128 @@ if (isset($_SESSION['name'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="messages.css">
-    <title>Party Go</title>
-    <style>
-       
-    </style>
+    <title>MovieEarn</title>
 </head>
 <body>
-<?php if(isset($_SESSION['name'])){ ?>
-    <div class="memberinfo">
-        <div><b>帳號</b><p><?php echo $_SESSION['username']; ?></p></div>
-        <div><b>餘額</b><p><?php echo $_SESSION['money']; ?></p></div>
-        <a href="./member_logout.php" class="logout">登出</a>
-    </div>
-    <?php } ?>
-<?php include_once('./shard.php'); ?>
-    <div class="content">
-    <?php include_once('./left.php'); ?>
-    <div class="messages">
-                <h2>訊息公告</h2>
-                <div class="messatgeItem">
-                    <div class="item active" id="msgbtn1">最新公告</div>
-                    <div class="item" id="msgbtn2">活動公告</div>
-                    <div class="item" id="msgbtn3">系統公告</div>
-                    <div class="item" id="msgbtn4">客服公告</div>
-                </div>
-                <div class="post" id="post1">
-                    
-                    <?php foreach($RS_mb as $item){ ?>
-                        <a href="./postcontent.php?id=<?php echo $item['id'];?>" class="list">
-                            <h4 class="class new"><?php if($item['post']==1){echo "活動";}elseif($item['post']==2){echo "系統";}else{echo "客服";} ?></h4>
-                            <div class="date"><?php echo $item['time']; ?></div>
-                            <h4 class="title"><?php echo $item['title']; ?></h4>
-                        </a>
-                    <?php } ?>
-                </div>
-                <div class="post" id="post2">
-                <?php foreach($RS_mb1 as $item){ ?>
-                        <a href="./postcontent.php?id=<?php echo $item['id'];?>" class="list">
-                            <h4 class="class active"><?php if($item['post']==1){echo "活動";}elseif($item['post']==2){echo "系統";}else{echo "客服";} ?></h4>
-                            <div class="date"><?php echo $item['time']; ?></div>
-                            <h4 class="title"><?php echo $item['title']; ?></h4>
-                        </a>
-                    <?php } ?>
-                   
-                </div>
-                <div class="post" id="post3">
-                <?php foreach($RS_mb2 as $item){ ?>
-                        <a href="./postcontent.php?id=<?php echo $item['id'];?>" class="list">
-                            <h4 class="class system"><?php if($item['post']==1){echo "活動";}elseif($item['post']==2){echo "系統";}else{echo "客服";} ?></h4>
-                            <div class="date"><?php echo $item['time']; ?></div>
-                            <h4 class="title"><?php echo $item['title']; ?></h4>
-                        </a>
-                    <?php } ?>
-                   
-                </div>
-                <div class="post" id="post4">
-                <?php foreach($RS_mb3 as $item){ ?>
-                        <a href="./postcontent.php?id=<?php echo $item['id'];?>" class="list">
-                            <h4 class="class service"><?php if($item['post']==1){echo "活動";}elseif($item['post']==2){echo "系統";}else{echo "客服";} ?></h4>
-                            <div class="date"><?php echo $item['time']; ?></div>
-                            <h4 class="title"><?php echo $item['title']; ?></h4>
-                        </a>
-                    <?php } ?>
-                    
-                </div>
-            </div>
-    </div>
 
+<?php include_once('./header.php'); ?>
+    <div class="messages">
+      <div class="title">
+          <img src="./images/logo.png" alt="">
+          <h1>最新消息</h1>
+      </div>
+      <div class="class">
+          <p>分類:</p>
+          <div class="classbtn"><span class='chkbox'><p class="chkok" style="display:block"></p></span>全部</div>
+          <div class="classbtn"><span class='chkbox'><p class="chkok"></p></span>綜合</div>
+          <div class="classbtn"><span class='chkbox'><p class="chkok"></p></span>活動</div>
+          <div class="classbtn"><span class='chkbox'><p class="chkok"></p></span>更新</div>
+      </div>
+      <div class="post" id="post1">
+          <div class="item">
+              <img src="./images/01.png" alt="">
+              <div class="content">
+                  <h2>0322太陽的悲願登場!</h2>
+                  <small>2022/03/22</small>
+                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                  <a href="./post.php?id=" class="moer">MORE...</a>
+                </div>
+                <div class="className">
+                    更新
+                </div>
+          </div>
+          <div class="item">
+              <img src="./images/01.png" alt="">
+              <div class="content">
+                  <h2>0322太陽的悲願登場!</h2>
+                  <small>2022/03/22</small>
+                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                  <a href="./post.php?id=" class="moer">MORE...</a>
+                </div>
+                <div class="className">
+                    更新
+                </div>
+          </div>
+          <div class="item">
+              <img src="./images/01.png" alt="">
+              <div class="content">
+                  <h2>0322太陽的悲願登場!</h2>
+                  <small>2022/03/22</small>
+                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                  <a href="./post.php?id=" class="moer">MORE...</a>
+                </div>
+                <div class="className">
+                    更新
+                </div>
+          </div>
+          <div class="item">
+              <img src="./images/01.png" alt="">
+              <div class="content">
+                  <h2>0322太陽的悲願登場!</h2>
+                  <small>2022/03/22</small>
+                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                  <a href="./post.php?id=" class="moer">MORE...</a>
+                </div>
+                <div class="className">
+                    更新
+                </div>
+          </div>
+          <div class="item">
+              <img src="./images/01.png" alt="">
+              <div class="content">
+                  <h2>0322太陽的悲願登場!</h2>
+                  <small>2022/03/22</small>
+                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                  <a href="./post.php?id=" class="moer">MORE...</a>
+                </div>
+                <div class="className">
+                    更新
+                </div>
+          </div>
+      </div>
+      <div class="post" id="post2">
+          <div class="item">
+              <img src="./images/01.png" alt="">
+              <div class="content">
+                  <h2>0322太陽的悲願登場!</h2>
+                  <small>2022/03/22</small>
+                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                  <a href="./post.php?id=" class="moer">MORE...</a>
+                </div>
+                <div class="className">
+                    綜合
+                </div>
+          </div>
+      </div>
+      <div class="post" id="post3">
+          <div class="item">
+              <img src="./images/01.png" alt="">
+              <div class="content">
+                  <h2>0322太陽的悲願登場!</h2>
+                  <small>2022/03/22</small>
+                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                  <a href="./post.php?id=" class="moer">MORE...</a>
+                </div>
+                <div class="className">
+                    活動
+                </div>
+          </div>
+      </div>
+      <div class="post" id="post4">
+          <div class="item">
+              <img src="./images/01.png" alt="">
+              <div class="content">
+                  <h2>0322太陽的悲願登場!</h2>
+                  <small>2022/03/22</small>
+                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                  <a href="./post.php?id=" class="moer">MORE...</a>
+                </div>
+                <div class="className">
+                    更新
+                </div>
+          </div>
+      </div>
+    </div>
     <?php include_once('./footer.php'); ?>
     <script src="script.js"></script>
     <script src="messages.js"></script>
@@ -118,3 +173,13 @@ if (isset($_SESSION['name'])) {
 ?>
 <?php include_once('./error.php') ?>
 <?php } ?>
+<!-- 
+<div class="post" id="post1">
+    <?php foreach($RS_mb as $item){ ?>
+        <a href="./postcontent.php?id=<?php echo $item['id'];?>" class="list">
+            <h4 class="class new"><?php if($item['post']==1){echo "活動";}elseif($item['post']==2){echo "系統";}else{echo "客服";} ?></h4>
+            <div class="date"><?php echo $item['time']; ?></div>
+            <h4 class="title"><?php echo $item['title']; ?></h4>
+        </a>
+    <?php } ?>
+</div> -->

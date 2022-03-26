@@ -210,9 +210,23 @@ header{
          }
     }
 }
-footer{
+.bottom{
     width:100%;
     height: 100vh;
-    background-color: #111;
+    background-color: #212121;
     color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    >h1{
+        text-align: center;
+        color:#fff;
+        margin-bottom: 60px;
+    }
+    >p{
+        width:80%;
+        font-size: 18px;
+    }
 }
+

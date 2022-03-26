@@ -2,12 +2,12 @@
 <header id="header">
         <a href="./" id="logo"><img src="./images/logo.png" alt=""><span>MovieEarn</span></a>
         <ul>
-            <a href="./notfound.php"><img src="./images/btn1.png">訊息公告</a>
+            <a href="./messages.php"><img src="./images/btn1.png">訊息公告</a>
             <a href="./notfound.php"><img src="./images/btn2.png">新手教學</a>
             <a href="./login.php"><img src="./images/btn3.png"><?php if(isset($_SESSION['name'])){echo "回到首頁"; }else{echo "會員申請";}?></a>
             <a href="./earn.php"><img src="./images/btn4.png">接取任務</a>
-            <a href="./notfound.php"><img src="./images/btn5.png">儲存金幣</a>
-            <a href="./notfound.php"><img src="./images/btn6.png">聯繫客服</a>
+            <a href="./gold.php"><img src="./images/btn5.png">儲存金幣</a>
+            <a href="./contact.php"><img src="./images/btn6.png">聯繫客服</a>
         </ul>
         <div id="menu"><i class="fa-solid fa-xmark" id="menuicon"></i></div>
 
