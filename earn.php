@@ -13,16 +13,9 @@ if (isset($_SESSION['name'])) {
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="earn.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Movieearn</title>
+    <title>MovieEarn</title>
 </head>
 <body>
-<?php if(isset($_SESSION['name'])){ ?>
-    <div class="memberinfo">
-        <div><b>帳號</b><p><?php echo $_SESSION['username']; ?></p></div>
-        <div><b>餘額</b><p id="moneyyyyy"><?php echo $_SESSION['money']; ?></p></div>
-        <a href="./member_logout.php" class="logout">登出</a>
-    </div>
-    <?php } ?>
     <?php include_once('./header.php'); ?>
     <div class="content">
        <div class="earn">
