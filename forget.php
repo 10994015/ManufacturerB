@@ -1,8 +1,6 @@
 <?php
 session_start();
 include_once('./conn.php');
-
-if (isset($_SESSION['name'])) {
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +44,7 @@ if (isset($_SESSION['name'])) {
 <?php include_once('./header.php'); ?>
     <div class="content">
         <div class="gold">
-            <h2>忘記密碼加入客服Line並協助開單</h2>
+            <h2>忘記密碼請加入客服Line並協助更改</h2>
             <img src="./images/line.jpg" alt="">
             <p>LINE ID: love22001</p>
             <p>網址: <a href="https://line.me/ti/p/V3KeyNKf0K#~">https://line.me/ti/p/V3KeyNKf0K#~</a></p>
@@ -57,10 +55,3 @@ if (isset($_SESSION['name'])) {
     <script src="script.js"></script>
 </body>
 </html>
-
-<?php
-}else{
-
-?>
-<?php include_once('./error.php') ?>
-<?php } ?>

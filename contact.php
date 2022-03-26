@@ -46,7 +46,7 @@ if (isset($_SESSION['name'])) {
 <?php include_once('./header.php'); ?>
     <div class="content">
         <div class="gold">
-            <h2>儲值請加入客服Line並協助開單</h2>
+            <h2>請加入客服Line並進行聯繫</h2>
             <img src="./images/line.jpg" alt="">
             <p>LINE ID: love22001</p>
             <p>網址: <a href="https://line.me/ti/p/V3KeyNKf0K#~">https://line.me/ti/p/V3KeyNKf0K#~</a></p>

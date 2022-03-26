@@ -69,7 +69,7 @@ if(isset($_GET['mailok']) && $_GET['mailok']==1){
                 <input type="password" name="pwd" class="mem_pwd" placeholder="請輸入密碼...." required/>
                 <div class="link">
                     <a href="./register.php" class="registerlink">會員申請</a>
-                    <a href="javascript:;" id="forgettext">忘記密碼?</a>
+                    <a href="./forget.php" id="forgettext">忘記密碼?</a>
                 </div>
                 <input type="submit" class="submit-btn" value="登入" />
             </form>
