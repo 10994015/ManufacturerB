@@ -55,12 +55,25 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 550px) {
+  .messages > .class {
+    padding: 10px 20px;
+  }
+}
+
 .messages > .class > p {
   margin-right: 12px;
+  min-width: 40px;
+}
+
+@media screen and (max-width: 430px) {
+  .messages > .class > p {
+    display: none;
+  }
 }
 
 .messages > .class > div {
-  width: 70px;
+  min-width: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,6 +84,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+}
+
+@media screen and (max-width: 430px) {
+  .messages > .class > div {
+    min-width: 60px;
+  }
 }
 
 .messages > .post {

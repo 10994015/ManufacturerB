@@ -34,15 +34,25 @@ body{
         padding:10px 80px;
         align-items: center;
         width:100%;
+        @media screen and (max-width:550px){
+            padding:10px 20px;
+        }
         >p{
             margin-right: 12px;
+            min-width:40px;
+            @media screen and (max-width:430px){
+                display: none;
+            }
         }
         >div{
-            width:70px;
+            min-width:70px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            @media screen and (max-width:430px){
+                min-width:60px;
+            }
         }
     }
     >.post{

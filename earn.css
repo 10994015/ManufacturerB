@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: 200px 200px 200px;
     grid-template-rows: 200px 200px 200px;
-    width:700px;
+    width:100%;
+    justify-content: center;
     margin: 0 auto;
     margin-top: 50px;
 }

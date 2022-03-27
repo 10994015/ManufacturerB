@@ -2,6 +2,7 @@
 session_start();
 include_once('./conn.php');
 if (isset($_SESSION['name'])) {
+
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +15,21 @@ if (isset($_SESSION['name'])) {
     <link rel="stylesheet" href="earn.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>MovieEarn</title>
+    <style>
+    #moneyyyyy{
+        position: absolute;
+        top: -999999999999999;
+        left:-99999999999999;
+        opacity: 0;
+        z-index: -9999999;
+    }
+    </style>
+    
 </head>
 <body>
+<?php if(isset($_SESSION['name'])){ ?>
+       <p id="moneyyyyy"><?php echo $_SESSION['money']; ?></p>
+    <?php } ?>
     <?php include_once('./header.php'); ?>
     <div class="content">
        <div class="earn">
@@ -109,8 +123,9 @@ if (isset($_SESSION['name'])) {
     </div>
 
     <?php include_once('./footer.php'); ?>
-    <script src="script.js"></script>
     <script src="app.js"></script>
+    <script src="script.js"></script>
+    
 </body>
 </html>
 
