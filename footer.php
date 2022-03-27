@@ -53,8 +53,8 @@ footer .footerlist > .list > p {
 
 <footer>
         <h2>聯繫我們</h2>
-        <p>成立於2022年1月</p>
-        <p>若您想成為MovieEarn的合作夥伴，或是你想加入若您想成為MovieEarn的合作夥伴，或是你想加入Party成為我們的一員，都歡迎透過客服聯繫我們。</p>
+        <p>成立於2021年6月</p>
+        <p>若您想成為MovieEarn的合作夥伴，或是你想加入若您想成為MovieEarn的合作夥伴，或是你想加入MovieEarn成為我們的一員，都歡迎透過客服聯繫我們。</p>
         <div class="footerlist">
             <div class="list">
                 <h3>創造價值</h3>

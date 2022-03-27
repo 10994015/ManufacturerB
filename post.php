@@ -3,15 +3,23 @@ session_start();
 include_once('./conn.php');
 
 if (isset($_SESSION['name'])) {
-
-    try{
-        $sql_str = "SELECT * FROM messages ORDER BY id DESC";
-        $RS_mb = $conn -> query($sql_str);
-        $total_RS_mb = $RS_mb -> rowCount();
+    if(isset($_GET['id']) && $_GET['id'] != ""){
+        try{
+            $sql_str = "SELECT * FROM messages WHERE id = :id";
+            $stmt = $conn -> prepare($sql_str);
+            $id = $_GET['id'];
+            $stmt -> bindParam(':id',$id);
+            $stmt -> execute();
+            $total = $stmt -> rowCount();
+            if($total>=1){
+                $row_RS = $stmt -> fetch(PDO::FETCH_ASSOC);
+            }
+        }
+        catch(PDOException $e){
+            die('Error!:'.$e->getMessage());
+          }
     }
-    catch(PDOException $e){
-        die('Error!:'.$e->getMessage());
-      }
+    
 ?>
 
 <!DOCTYPE html>
@@ -29,16 +37,31 @@ if (isset($_SESSION['name'])) {
 <?php include_once('./header.php'); ?>
    <div class="post">
        <div class="content">
-        <h2>0322太陽的悲願登場!</h2>
+        <h2><?php echo $row_RS['title']; ?></h2>
         <img src="./images/01.png" alt="">
-        <small>2022/03/22</small>
-        <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-        <div>更新</div>
+        <small><?php echo $row_RS['time']; ?></small>
+        <p><?php echo nl2br($row_RS['content']); ?></p>
+        <div id="className"><?php  if($row_RS['post']==1){echo "綜合";}elseif($row_RS['post']==2){echo "活動";}else{echo "更新";} ?></div>
      </div>
    </div>
    <?php include_once('./footer.php'); ?>
     <script src="script.js"></script>
     <script src="messages.js"></script>
+    <script>
+    window.onload = function(){
+        const className = document.getElementById('className');
+        if(className.innerText==="綜合"){
+            className.style.border = "1px  blue solid";
+            className.style.color = "blue";
+        }else if(className.innerText==="活動"){
+            className.style.border = "1px  red solid";
+            className.style.color = "red";
+        }else{
+            className.style.border = "1px  green solid";
+            className.style.color = "green";
+        }
+    }
+    </script>
 </body>
 </html>
 
