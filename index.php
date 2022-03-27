@@ -3,18 +3,6 @@ require_once('./conn.php');
 if( !isset($_SESSION) ){
     session_start();
     try{
-        $sql_str = "SELECT * FROM messages  ORDER BY id DESC limit 5";
-        $RS_mb = $conn -> query($sql_str);
-        $total_RS_mb = $RS_mb -> rowCount();
-
-        $sql_str1 = "SELECT * FROM messages  WHERE post=1 ORDER BY id DESC limit 5";
-        $RS_mb1 = $conn -> query($sql_str1);
-
-        $sql_str2 = "SELECT * FROM messages  WHERE post=2 ORDER BY id DESC limit 5";
-        $RS_mb2 = $conn -> query($sql_str2);
-
-        $sql_str3 = "SELECT * FROM messages  WHERE post=3 ORDER BY id DESC limit 5";
-        $RS_mb3 = $conn -> query($sql_str3);
     }
     catch(PDOException $e){
         die('Error!:'.$e->getMessage());

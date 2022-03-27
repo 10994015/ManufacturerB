@@ -57,108 +57,54 @@ if (isset($_SESSION['name'])) {
           <div class="classbtn"><span class='chkbox'><p class="chkok"></p></span>更新</div>
       </div>
       <div class="post" id="post1">
-          <div class="item">
-              <img src="./images/01.png" alt="">
-              <div class="content">
-                  <h2>0322太陽的悲願登場!</h2>
-                  <small>2022/03/22</small>
-                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                  <a href="./post.php?id=" class="moer">MORE...</a>
-                </div>
-                <div class="className">
-                    更新
-                </div>
-          </div>
-          <div class="item">
-              <img src="./images/01.png" alt="">
-              <div class="content">
-                  <h2>0322太陽的悲願登場!</h2>
-                  <small>2022/03/22</small>
-                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                  <a href="./post.php?id=" class="moer">MORE...</a>
-                </div>
-                <div class="className">
-                    更新
-                </div>
-          </div>
-          <div class="item">
-              <img src="./images/01.png" alt="">
-              <div class="content">
-                  <h2>0322太陽的悲願登場!</h2>
-                  <small>2022/03/22</small>
-                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                  <a href="./post.php?id=" class="moer">MORE...</a>
-                </div>
-                <div class="className">
-                    更新
-                </div>
-          </div>
-          <div class="item">
-              <img src="./images/01.png" alt="">
-              <div class="content">
-                  <h2>0322太陽的悲願登場!</h2>
-                  <small>2022/03/22</small>
-                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                  <a href="./post.php?id=" class="moer">MORE...</a>
-                </div>
-                <div class="className">
-                    更新
-                </div>
-          </div>
-          <div class="item">
-              <img src="./images/01.png" alt="">
-              <div class="content">
-                  <h2>0322太陽的悲願登場!</h2>
-                  <small>2022/03/22</small>
-                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                  <a href="./post.php?id=" class="moer">MORE...</a>
-                </div>
-                <div class="className">
-                    更新
-                </div>
-          </div>
       </div>
       <div class="post" id="post2">
+      <?php foreach($RS_mb1 as $item){ ?>
           <div class="item">
-              <img src="./images/01.png" alt="">
+              <img src="<?php echo $item['img']; ?>" alt="">
               <div class="content">
-                  <h2>0322太陽的悲願登場!</h2>
-                  <small>2022/03/22</small>
-                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                  <a href="./post.php?id=" class="moer">MORE...</a>
+                  <h2><?php echo $item['title'];?>!</h2>
+                  <small><?php echo $item['time'];?></small>
+                  <p><?php echo $item['content'];?></p>
+                  <a href="./post.php?id=<?php echo $item['id'];?>" class="moer">MORE...</a>
                 </div>
                 <div class="className">
-                    綜合
+                    <?php if($item['post'] == 1){echo "綜合";}elseif($item['post']==2){echo "活動";}else{echo "更新";} ?>
                 </div>
           </div>
+        <?php } ?>
       </div>
       <div class="post" id="post3">
+      <?php foreach($RS_mb2 as $item){ ?>
           <div class="item">
-              <img src="./images/01.png" alt="">
+              <img src="<?php echo $item['img']; ?>" alt="">
               <div class="content">
-                  <h2>0322太陽的悲願登場!</h2>
-                  <small>2022/03/22</small>
-                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                  <a href="./post.php?id=" class="moer">MORE...</a>
+                  <h2><?php echo $item['title'];?>!</h2>
+                  <small><?php echo $item['time'];?></small>
+                  <p><?php echo $item['content'];?></p>
+                  <a href="./post.php?id=<?php echo $item['id'];?>" class="moer">MORE...</a>
                 </div>
                 <div class="className">
-                    活動
+                    <?php if($item['post'] == 1){echo "綜合";}elseif($item['post']==2){echo "活動";}else{echo "更新";} ?>
                 </div>
           </div>
+        <?php } ?>
       </div>
       <div class="post" id="post4">
+      <?php foreach($RS_mb3 as $item){ ?>
           <div class="item">
-              <img src="./images/01.png" alt="">
+              <img src="<?php echo $item['img']; ?>" alt="">
               <div class="content">
-                  <h2>0322太陽的悲願登場!</h2>
-                  <small>2022/03/22</small>
-                  <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
-                  <a href="./post.php?id=" class="moer">MORE...</a>
+                  <h2><?php echo $item['title'];?>!</h2>
+                  <small><?php echo $item['time'];?></small>
+                  <p><?php echo $item['content'];?></p>
+                  <a href="./post.php?id=<?php echo $item['id'];?>" class="moer">MORE...</a>
                 </div>
                 <div class="className">
-                    更新
+                    <?php if($item['post'] == 1){echo "綜合";}elseif($item['post']==2){echo "活動";}else{echo "更新";} ?>
                 </div>
           </div>
+        <?php } ?>
       </div>
     </div>
     <?php include_once('./footer.php'); ?>

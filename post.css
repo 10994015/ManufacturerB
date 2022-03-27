@@ -13,6 +13,12 @@ body {
   padding-top: 50px;
 }
 
+@media screen and (max-width: 1050px) {
+  .post {
+    width: 95%;
+  }
+}
+
 .post > .content {
   width: 75%;
   margin: auto;

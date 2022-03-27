@@ -39,7 +39,12 @@ if (isset($_SESSION['name'])) {
         .content > .gold > p >a {
             color:#fff;
         }
-       
+        @media screen and (max-width:400px){
+        .content > .gold > img{
+            width:90%;
+            height: auto;
+        }
+       }
     </style>
 </head>
 <body>

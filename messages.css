@@ -12,6 +12,12 @@ body {
   padding-bottom: 50px;
 }
 
+@media screen and (max-width: 1050px) {
+  .messages {
+    width: 95%;
+  }
+}
+
 .messages > .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,6 +98,15 @@ body {
           align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .messages > .post > .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .messages > .post > .item > img {
   width: 220px;
   height: 150px;
@@ -101,6 +116,12 @@ body {
 
 .messages > .post > .item > .content {
   width: 500px;
+}
+
+@media screen and (max-width: 580px) {
+  .messages > .post > .item > .content {
+    width: 90%;
+  }
 }
 
 .messages > .post > .item > .content > h2 {
@@ -127,19 +148,31 @@ body {
   color: #888;
 }
 
+@media screen and (max-width: 770px) {
+  .messages > .post > .item > .content > p {
+    width: 50%;
+  }
+}
+
 .messages > .post > .item > .content > a {
   color: #4371C2;
   font-weight: 600;
 }
 
 .messages > .post > .item > .className {
-  width: 130px;
+  min-width: 130px;
   height: 30px;
   border: 1px  green solid;
   color: green;
   text-align: center;
   line-height: 30px;
   font-size: 14px;
+}
+
+@media screen and (max-width: 850px) {
+  .messages > .post > .item > .className {
+    min-width: 100px;
+  }
 }
 
 .chkbox {

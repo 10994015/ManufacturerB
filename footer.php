@@ -41,6 +41,14 @@ footer .footerlist > .list > p {
     text-align: center;
     letter-spacing:1px;
 }
+@media screen and (max-width:1250px){
+    footer .footerlist{
+        flex-direction: column;
+    }
+    footer .footerlist > .list{
+        margin:30px 0;
+    }
+}
 </style>
 
 <footer>
