@@ -45,7 +45,7 @@ header > #menu {
   line-height: 50px;
 }
 
-header > #box > #logo {
+header > #logo {
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,19 +59,19 @@ header > #box > #logo {
   text-align: center;
 }
 
-header > #box > #logo > img {
+header > #logo > img {
   width: 80px;
   height: auto;
   margin-right: 8px;
 }
 
-header > #box > #logo > span {
+header > #logo > span {
   font-size: 18px;
   font-weight: 600;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-header > #box > ul {
+header > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,7 +89,7 @@ header > #box > ul {
   width: 100%;
 }
 
-header > #box > ul > a {
+header > ul > a {
   margin: 0px 0;
   font-size: 18px;
   display: -webkit-box;
@@ -108,20 +108,20 @@ header > #box > ul > a {
   font-size: 17px;
 }
 
-header > #box > ul > a:hover {
+header > ul > a:hover {
   border-bottom: 2px #ccc solid;
   border-right: 4px #B80816 solid;
   background-color: #000;
   font-weight: 600;
 }
 
-header > #box > ul > a > img {
+header > ul > a > img {
   width: 40px;
   height: 40px;
   margin-right: 12px;
 }
 
-header > #box a {
+header a {
   color: #fff;
 }
 

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <header id="header">
 <div id="menu"><i class="fa-solid fa-xmark" id="menuicon"></i></div>
-        <div id="box">
+        
             <a href="./" id="logo"><img src="./images/logo.png" alt=""><span>MovieEarn</span></a>
             <ul>
                 <a href="./messages.php"><img src="./images/btn1.png">訊息公告</a>
@@ -18,7 +18,7 @@
                 <a href="./member_logout.php" class="logout" style="color:#111">登出</a>
             </div>
             <?php } ?>
-        </div>
+        
     </header>
 <script>
 const menu = document.getElementById('menu');
