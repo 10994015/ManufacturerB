@@ -31,7 +31,8 @@ const storeModule = document.getElementById('storeModule');
 const storeBtn = document.getElementById('storeBtn');
 const moneyyyyy = document.getElementById('moneyyyyy');
 let storemoney = moneyyyyy.innerText;
-
+const opengift = document.getElementById('opengift');
+const gifbox = document.getElementById('gifbox')
 cardContent.src = imgArr[randomNum].src;
 const orderCloseFn = ()=>{
     orderModule.style.display = "none";
@@ -50,16 +51,29 @@ const clearBorder = ()=>{
         task[t].style.border = "none";
     }
 }
+const clearanim = ()=>{
+    for(let i=0;i<task.length;i++){
+        task[i].classList.remove('anim');
+    }
+}
 const handtaskFn = (e)=>{
     clearBorder();
+    clearanim();
     taskBtn.addEventListener('click',taskBtnfn);
     taskBtn.classList.remove('disable');
-    e.target.style.border = "2px #000 solid";
+    // e.target.style.border = "2px #000 solid";
+    e.target.classList.add('anim');
 }
 const taskBtnfn = ()=>{
     taskModule.style.display = "none";
-    cardModule.style.display = "block";
-    taskchkbox.checked = true;
+    gifbox.style.display = "block";
+    opengift.style.display = "block";
+    setTimeout(()=>{
+        cardModule.style.display = "block";
+        taskchkbox.checked = true;
+        gifbox.style.display = "none";
+        opengift.style.display = "none";
+    },2000)
 }
 ordersBtn.addEventListener('click',()=>{
     if(taskchkbox.checked){

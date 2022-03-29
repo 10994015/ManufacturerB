@@ -39,6 +39,8 @@ if( !isset($_SESSION) ){
       <img src="./images/03.png" alt="">
       <img src="./images/04.png" alt="">
       <img src="./images/05.png" alt="">
+      <img src="./images/06.png" alt="">
+      <img src="./images/07.png" alt="">
       <div>
         <i class="fa-solid fa-circle-chevron-left" id="left"></i>
         <i class="fa-solid fa-circle-chevron-right" id="right"></i>

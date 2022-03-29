@@ -73,19 +73,22 @@ if (isset($_SESSION['name'])) {
         <div class="box">
         <div class="boxheader">通知 <i class="fas fa-times orderClose"></i> </div>
             <div class="taskBox">
-                <img src="./images/123456.png" class="task">
-                <img src="./images/123456.png" class="task">
-                <img src="./images/123456.png" class="task">
-                <img src="./images/123456.png" class="task">
-                <img src="./images/123456.png" class="task">
-                <img src="./images/123456.png" class="task">
-                <img src="./images/123456.png" class="task">
-                <img src="./images/123456.png" class="task">
+                <img src="./images/close.png" class="task">
+                <img src="./images/close.png" class="task">
+                <img src="./images/close.png" class="task">
+                <img src="./images/close.png" class="task">
+                <img src="./images/close.png" class="task">
+                <img src="./images/close.png" class="task">
+                <img src="./images/close.png" class="task">
+                <img src="./images/close.png" class="task">
             </div>
             <div class="boxbottom"><a href="javascript:;" id="taskBtn" class="disable">抽取</a></div>
         </div>
     </div>
     <input type="checkbox" id="taskchkbox">
+    <div class="giftbox" id="gifbox">
+        <img src="./images/open.png" id="opengift" class="opengift">
+    </div>
     <div class="cardModule" id="cardModule" >
         <div class="back"></div>
         <div class="box">
