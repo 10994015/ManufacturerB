@@ -2,7 +2,7 @@
 session_start();
 include_once('./conn.php');
 
-if (isset($_SESSION['name'])) {
+
 
     try{
         $sql_str = "SELECT * FROM messages ORDER BY id DESC";
@@ -113,19 +113,3 @@ if (isset($_SESSION['name'])) {
 </body>
 </html>
 
-<?php
-}else{
-
-?>
-<?php include_once('./error.php') ?>
-<?php } ?>
-<!-- 
-<div class="post" id="post1">
-    <?php foreach($RS_mb as $item){ ?>
-        <a href="./postcontent.php?id=<?php echo $item['id'];?>" class="list">
-            <h4 class="class new"><?php if($item['post']==1){echo "活動";}elseif($item['post']==2){echo "系統";}else{echo "客服";} ?></h4>
-            <div class="date"><?php echo $item['time']; ?></div>
-            <h4 class="title"><?php echo $item['title']; ?></h4>
-        </a>
-    <?php } ?>
-</div> -->
