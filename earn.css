@@ -1,11 +1,11 @@
 .earn {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px;
-    width:100%;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100vh;
     margin: 0 auto;
-    margin-top: 50px;
+    background-color: #212121;
 }
 .earn > a, .earn > div{
     display: block;
@@ -21,8 +21,13 @@
     cursor: pointer;
 }
 .earn > img{
-    width:180px;
+    width:400px;
     cursor: pointer;
+}
+@media screen and (max-width:420px){
+    .earn > img{
+        width:90%;
+    }
 }
 .orderModule,.taskModule,.urlModule,.otherModule,.alreadyModule,.cardModule,.storeModule{
     position: relative;

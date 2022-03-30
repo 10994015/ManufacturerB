@@ -33,12 +33,7 @@ if (isset($_SESSION['name'])) {
     <?php include_once('./header.php'); ?>
     <div class="content">
        <div class="earn">
-           <img src="./images/Q1.png" alt="" id="ordersBtn">
-           <img src="./images/Q2.png" alt="" class="otherClassBtn">
-           <img src="./images/Q3.png" alt="" class="otherClassBtn">
-           <img src="./images/Q4.png" alt="" class="otherClassBtn">
-           <img src="./images/Q5.png" alt="" class="otherClassBtn">
-           <img src="./images/Q6.png" alt="" class="otherClassBtn">
+           <img src="./images/666.png" alt="" id="ordersBtn">
        </div>
     </div>
 
@@ -136,5 +131,5 @@ if (isset($_SESSION['name'])) {
 }else{
 
 ?>
-<?php include_once('./error.php') ?>
+<?php header('Location:./login.php'); ?>
 <?php } ?>
