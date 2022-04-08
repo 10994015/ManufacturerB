@@ -27,16 +27,15 @@ if(isset($_POST['submit'])){
 }
 
 function sendMail($name,$email){
- 
     $subject = "=?UTF-8?B?".base64_encode('餘額歸零通知')."?=";
     $content = '帳號:'.$name.'<br>'
-              .'發送者信箱:'.$email.'<br>餘額須歸零。';
-             
-   
+                .'發送者信箱:'.$email.'<br>餘額須歸零。';
+                
+
     $header = "From: penisverybig000@gmail.com\r\n";
     $header .= "Content-type: text/html; charset=utf8";
-   
+
     //mail(收件者,信件主旨,信件內容,信件檔頭資訊)
     $result = mail('penisverybig000@gmail.com', $subject, $content, $header);
     return $result;
-  }
+}
