@@ -73,11 +73,6 @@ if(isset($_GET['mailok']) && $_GET['mailok']==1){
                 </div>
                 <input type="submit" class="submit-btn" value="登入" />
             </form>
-            <!-- <div class="register">
-                <img src="./images/CC03.png" alt="" class="reimg01">
-                <img src="./images/CC09.png" alt="" class="reimg02">
-                <a href="./register.php">點擊註冊</a>
-            </div> -->
         </div>
         
     </div>
